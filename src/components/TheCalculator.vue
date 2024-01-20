@@ -22,7 +22,7 @@
 import {ref} from 'vue';
 import Decimal from 'decimal.js';
 
-const calcVal = ref('');
+const calcVal = ref(0);
 let operators = null;
 let prevCalcVal = '';
 const buttons = ['C', '%', '=', '+', '7', '8', '9', '-', '4', '5', '6', '*', '1', '2', '3', '/', '0', '.'];
