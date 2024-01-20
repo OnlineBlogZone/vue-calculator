@@ -1,0 +1,66 @@
+<p>In this post, you will learn how to create a basic calculator in Vue.js. You will learn about the composition API,
+    and how reactive elements of Vue.Js work. First, you will learn about the Vue.js framework, next you will learn how
+    to install your first Vue.js application and last you will be guided in creating the calculator yourself.</p>
+
+<!-- TODO heel verhaal over waarom Vue.js -->
+<p>Most of front-end development is done using some sort of framework,
+    whereas frameworks are bundles of JavaScript libraries that ease your life in building websites, web apps, or mobile
+    apps. One of the most popular JavaScript framework is <a href="https://vuejs.org/"
+                                                             rel="nofollow,noindex">Vue.js</a>.
+    Vue.js is a Progressive Javascript Framework. The exact explanation of Progressive here is: <i> Vue.js is a
+        Progressive Javascript Framework.</i>Learning a new framework can be overwhelming, that is why it can be useful
+    to get familiar with a framework by building some easy applications first before you delve deeper in all the
+    functionalities of the framework. One of those applications is a calculator. All functionalities of the calculator
+    reside in the client-side of the application. This is why creating a calculator is a perfect example of a Vue.js
+    Application. </p>
+
+<h3>Installation</h3>
+<p>Make sure you have the latest version of <code>npm</code> installed on your computer before you start installing the
+    Vue.js application. Do so by running the following command on your Unix-based system.</p>
+<pre>sudo apt install nodejs</pre>
+<p>Now that we have the package manager installed to acquire JavaScript libraries, including <code>vue</code>, we can
+    install our first <code>Vue.js</code> project. Do so by acquiring the latest version of <code>Vue.js</code></p>
+<pre>npm create vue@latest</pre>
+<p>Give your project a name. For this project, let's say we name our project: vue-js-calculator. For the next steps, you
+    can choose <i>No</i> for all shown options. Now that the basic template is set, run the following commands to
+    install all necessary packages and run the demo Vue.js project in developer mode.</p>
+<pre>
+    cd test
+    npm install
+    npm run dev
+</pre>
+<p>Wait for the installation to complete, if all went well you should see the following message:</p>
+<pre>  <font color="#26A269"><b>VITE</b></font><font color="#26A269"> v5.0.11</font>  ready in <b>233</b> ms
+
+  <font color="#26A269">-></font>  <b>Local</b>:   <font color="#2AA1B3">http://localhost:</font><font
+            color="#2AA1B3"><b>5173</b></font><font color="#2AA1B3">/</font>
+<font color="#AAAAAA">  </font><font color="#196C46">-></font><font color="#AAAAAA">  </font><font color="#AAAAAA"><b>Network</b></font><font
+            color="#AAAAAA">: use </font><b>--host</b><font color="#AAAAAA"> to expose</font>
+<font color="#196C46">  -></font><font color="#AAAAAA">  press </font><b>h + enter</b><font color="#AAAAAA"> to show help</font>
+</pre>
+<p>Now you can visit the following page in your browser <a href="http://localhost:5173">http://localhost:5173</a>. You
+    should be able to view the following content:</p>
+<figure>
+    <!--    TODO IMAGE-->
+    <img src="" alt="">
+</figure>
+<p>Congratulations! You now have your first Vue.js application up and running. Let's start with coding our calculator
+    now!</p>
+<h3>Creating the calulator</h3>
+First, let's have a look at the starting point of any Vue.js application. The <code>main.js</code> file:
+<pre>
+    import './assets/main.css'
+
+    import { createApp } from 'vue'
+    import App from './App.vue'
+
+    createApp(App).mount('#app')
+
+</pre>
+<p>This file file is included in the <code>index.html</code> file. The above lines load the App application from the
+    <code>App.vue</code> file. Then the Vue.js application is bound to the div with the <code>app</code> identifier.
+    Thus, the Vue.js application starting point is the <code>App.vue</code> file.</p>
+<p>The current <code>App.vue</code> file contains all code to run the application. Let's remove all lines and make sure
+    it looks like this:</p>
+
+<h3>Conclusion</h3>
