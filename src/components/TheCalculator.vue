@@ -22,14 +22,18 @@
 import {ref} from 'vue';
 import Decimal from 'decimal.js';
 
-const calcVal = ref('');
+const calcVal = ref(0);
 let operators = null;
 let prevCalcVal = 0;
 const buttons = ['C', '%', '=', '+', '7', '8', '9', '-', '4', '5', '6', '*', '1', '2', '3', '/', '0', '.'];
 
 const buttonPress = (btn) => {
   if (!isNaN(btn) || btn === '.') {
-    calcVal.value += btn.toString() + '';
+    if (parseInt(calcVal.value) === 0 || calcVal.value === "Invalid expression") {
+      calcVal.value = btn.toString() + '';
+    } else {
+      calcVal.value += btn.toString() + '';
+    }
   } else {
     switch (btn) {
       case 'C':
